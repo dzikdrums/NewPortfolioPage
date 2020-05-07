@@ -1,0 +1,107 @@
+@import '../../styles/variables.scss';
+@import '../../styles/breakpoints.scss';
+
+.wrapper {
+  top: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins';
+
+  @include media('>tablet') {
+    flex-direction: row;
+  }
+
+  .main-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include media('>tablet') {
+      justify-content: flex-start;
+    }
+
+    .img-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin: 0 0 20px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    h2 {
+      margin: 0 0 50px;
+      font-weight: 500;
+    }
+  }
+
+  .description {
+    padding: 40px 10vw 0;
+    background-color: white;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include media('>550px') {
+      padding: 40px 12vw 0;
+    }
+
+    @include media('>tablet') {
+      padding: 40px 8vw;
+    }
+
+    h3 {
+      margin: 30px 0 0;
+      font-weight: 500;
+    }
+    .description-intro {
+      margin-top: 20px;
+      font-size: 5.6vw;
+      line-height: 8.5vw;
+      letter-spacing: -0.2vw;
+      color: lightgrey;
+      font-weight: 500;
+      animation-fill-mode: none;
+
+      @include media('>550px') {
+        font-size: 3vw;
+        line-height: 5vw;
+        letter-spacing: 0;
+      }
+
+      @include media('>tablet') {
+        font-size: 2vw;
+        line-height: 3vw;
+      }
+    }
+
+    .paragraphs {
+      margin-top: 20px;
+      color: $white;
+      font-size: 5vw;
+      line-height: 7.5vw;
+      letter-spacing: -0.112vw;
+      font-weight: 300;
+      mix-blend-mode: difference;
+
+      @include media('>550px') {
+        font-size: 3vw;
+        line-height: 5vw;
+        letter-spacing: 0;
+      }
+
+      @include media('>tablet') {
+        font-size: 1.4vw;
+        line-height: 3vw;
+      }
+    }
+  }
+}
