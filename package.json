@@ -23,7 +23,8 @@
     "scrollmagic-plugin-gsap": "^1.0.4",
     "smooth-scrollbar": "^8.5.2",
     "styled-components": "^5.1.0",
-    "uniqid": "^5.2.0"
+    "uniqid": "^5.2.0",
+    "vanilla-tilt": "^1.7.0"
   },
   "scripts": {
     "start": "react-scripts start",

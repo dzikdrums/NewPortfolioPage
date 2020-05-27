@@ -13,47 +13,36 @@ const AboutDescription = () => {
     <section className="wrapper">
       <div className="main-image-container">
         <>
-          <ScrollAnimation
-            animateIn="fadeIn"
-            delay={500}
-            duration={2}
-            animateOnce={true}
-          >
+          <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
             <div className="img-container">
               <img alt="project" src={Profile} />
             </div>
           </ScrollAnimation>
         </>
-        <ScrollAnimation
-          animateIn="fadeIn"
-          delay={500}
-          duration={2}
-          animateOnce={true}
-        >
+        <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
           <h2>Me searching for a Job</h2>
         </ScrollAnimation>
       </div>
       <div className="description">
-        <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+        <ScrollAnimation animateIn="fadeIn" duration={1} animateOnce={true}>
           <h3 className="fadeIn">My story</h3>
         </ScrollAnimation>
         <ScrollAnimation
           className="description-intro"
           animateIn="fadeIn"
-          duration={2}
+          duration={1}
           animateOnce={true}
         >
           At the end of 2018, my friends have finally succedeed in convincing me
           that programming is just like finishing puzzles, and that I should
           totally give it a try!
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+        <ScrollAnimation animateIn="fadeIn" duration={1} animateOnce={true}>
           <h3 className="fadeIn">Beginnings</h3>
         </ScrollAnimation>
         <ScrollAnimation
           animateIn="fadeIn"
-          delay={500}
-          duration={2}
+          duration={1}
           animateOnce={true}
           style={paragraphStyle}
           className="paragraphs"
@@ -64,13 +53,12 @@ const AboutDescription = () => {
           my endeavour in Codecool, but I felt like this is not completely my
           jam.
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+        <ScrollAnimation animateIn="fadeIn" duration={1} animateOnce={true}>
           <h3>Front-end journey</h3>
         </ScrollAnimation>
         <ScrollAnimation
           animateIn="fadeIn"
-          delay={500}
-          duration={2}
+          duration={1}
           animateOnce={true}
           style={paragraphStyle}
           className="paragraphs"
@@ -81,13 +69,12 @@ const AboutDescription = () => {
           completed a few React/Redux/WebDev courses on Eduweb, Udemy and spend
           wonderful afternoons on Stack Overflow :).
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+        <ScrollAnimation animateIn="fadeIn" duration={1} animateOnce={true}>
           <h3 className="fadeIn">My strengths</h3>
         </ScrollAnimation>
         <ScrollAnimation
           animateIn="fadeIn"
-          delay={500}
-          duration={2}
+          duration={1}
           animateOnce={true}
           style={paragraphStyle}
           className="paragraphs"
@@ -97,13 +84,12 @@ const AboutDescription = () => {
           APIs, design fully responsive websites, using semantic HTML and best
           practices for optimisation and accessibility.
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+        <ScrollAnimation animateIn="fadeIn" duration={1} animateOnce={true}>
           <h3 className="fadeIn">My plans</h3>
         </ScrollAnimation>
         <ScrollAnimation
           animateIn="fadeIn"
-          delay={500}
-          duration={2}
+          duration={1}
           animateOnce={true}
           style={paragraphStyle}
           className="paragraphs"

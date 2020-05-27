@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
+// import VanillaTilt from 'vanilla-tilt';
 import gsap from 'gsap';
 
 const tl = gsap.timeline();
@@ -36,7 +37,25 @@ const Case = ({ id, subtitle, title, img, code, demo }) => {
     }
   };
 
+  // const options = {
+  //   scale: 1.1,
+  //   speed: 500,
+  //   max: 30,
+  // };
+
+  // const Tilt = (props) => {
+  //   const { options, ...rest } = props;
+  //   const tilt = useRef(null);
+
+  //   useEffect(() => {
+  //     VanillaTilt.init(tilt.current, options);
+  //   }, [options]);
+
+  //   return <div ref={tilt} {...rest} />;
+  // };
+
   return (
+    // <Tilt options={options}>
     <div className="case" onClick={() => handleClick(id)}>
       <div className={`case-details case-${id}`}>
         <span>{subtitle}</span>
@@ -55,6 +74,7 @@ const Case = ({ id, subtitle, title, img, code, demo }) => {
         <img src={require(`../../assets/${img}.jpg`)} alt={title} />
       </div>
     </div>
+    // </Tilt>
   );
 };
 
