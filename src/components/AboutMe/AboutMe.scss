@@ -1,0 +1,261 @@
+@import '../../styles/breakpoints.scss';
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #ea291e;
+  color: #000;
+  z-index: 100;
+  overflow: hidden;
+  scroll: no;
+}
+
+.nav-header {
+  top: 96px;
+  position: relative;
+  height: 0;
+  h2 {
+    color: black;
+    margin: 5px 0;
+  }
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
+
+.close-nav {
+  &:hover {
+    .go-back {
+      opacity: 1;
+    }
+  }
+
+  .go-back {
+    position: absolute;
+    font-size: 1rem;
+    width: 70px;
+    right: 0;
+    bottom: -47px;
+    transform: translateX(-50%);
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  button {
+    transform-origin: center;
+    border: none;
+    padding: 20px;
+    background-color: transparent;
+    outline: none;
+    span {
+      width: 36px;
+      height: 4px;
+      display: block;
+      background: black;
+      margin: 8px;
+    }
+  }
+}
+
+.nav-list {
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    top: 20vh;
+    overflow: hidden;
+    li {
+      list-style: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 900;
+      height: 80px;
+      overflow: hidden;
+      will-change: height;
+      overflow: hidden;
+
+      @include media('>tablet') {
+        font-size: 3rem;
+        height: 85px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      &:hover {
+        height: auto;
+
+        .description {
+          color: white;
+        }
+      }
+
+      .link {
+        color: black;
+        position: relative;
+
+        div {
+          display: flex;
+          align-items: center;
+        }
+
+        &:hover {
+          @include media('<tablet') {
+            color: white;
+          }
+
+          .navFooter {
+            background-color: blue;
+          }
+        }
+
+        .description {
+          width: 70%;
+          max-width: 300px;
+          font-size: 1.2rem;
+          font-weight: 700;
+          line-height: 1.6rem;
+          margin-left: 108px;
+          color: white;
+
+          @include media('>tablet') {
+            color: black;
+          }
+        }
+
+        .arrow {
+          height: 72px;
+          margin-right: 8px;
+          svg {
+            width: 100px;
+            path {
+              fill: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: #000;
+
+  @include media('>tablet') {
+    left: 38%;
+  }
+  .reveal {
+    width: 100%;
+    background: #ea291e;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .video {
+    background: #000;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    video {
+      height: 100%;
+      filter: brightness(90%);
+
+      @include media('<tablet') {
+        filter: brightness(50%);
+        position: absolute;
+        right: -75%;
+      }
+    }
+  }
+}
+
+.navFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+
+  @include media('>tablet') {
+    padding: 56px 0;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include media('>tablet') {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  p {
+    color: black;
+  }
+  svg path {
+    fill: black;
+  }
+}
+
+.footerNav {
+  height: 300px;
+  margin-top: 296px;
+}
+
+.footerContent {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 0.5rem;
+  flex: 1;
+
+  a {
+    text-decoration: none;
+  }
+
+  @include media('>tablet') {
+    font-size: 1.8rem;
+  }
+}
+
+.footerSocial {
+  display: flex;
+  position: relative;
+  align-items: center;
+  a {
+    position: relative;
+    display: block;
+    padding: 8px;
+    svg {
+      width: 18px;
+      height: 18px;
+
+      @include media('>tablet') {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}

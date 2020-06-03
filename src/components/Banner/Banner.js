@@ -1,10 +1,11 @@
-import './banner.scss';
+import './Banner.scss';
 
 import { NavLink } from 'react-router-dom';
 import React from 'react';
 import { ReactComponent as RightArrow } from '../../assets/arrow-right.svg';
+import { motion } from 'framer-motion';
 
-const Banner = () => {
+const Banner = ({ onCursor }) => {
   return (
     <section className="main">
       <div className="container">
@@ -17,11 +18,16 @@ const Banner = () => {
               <span>what I do.</span>
             </div>
           </h2>
-          <div className="btn-row">
-            <NavLink to="/about-me">
-              More about me <RightArrow />
+          <motion.div
+            onMouseEnter={() => onCursor('pointer')}
+            onMouseLeave={onCursor}
+            className="btn-row"
+          >
+            <NavLink to="/technologies">
+              Technologies I use
+              <RightArrow />
             </NavLink>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

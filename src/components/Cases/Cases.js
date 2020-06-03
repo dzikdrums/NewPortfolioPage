@@ -1,4 +1,4 @@
-import './cases.scss';
+import './Cases.scss';
 
 import React, { useState } from 'react';
 
@@ -17,11 +17,11 @@ const caseStudies = [
   },
   {
     id: 2,
-    subtitle: 'New-wave Festival',
-    title: 'Festival page, with back-end',
+    subtitle: 'Portfolio website',
+    title: 'Project heavily focused on design',
     img: 'projects-4',
-    code: 'https://github.com/dzikdrums/RestApiHackers',
-    demo: 'https://newwavefestival.netlify.com',
+    code: 'https://github.com/dzikdrums/NewPortfolioPage',
+    demo: 'https://maciejdzikportfolio.netlify.app/',
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const caseStudies = [
   },
 ];
 
-const Cases = () => {
+const Cases = ({ onCursor }) => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handlePrevPage = () => {
@@ -82,7 +82,7 @@ const Cases = () => {
         </div>
         <div className={`row case-${currentPage}`}>
           {caseStudies.map((caseItem) => (
-            <Case key={caseItem.id} {...caseItem} />
+            <Case onCursor={onCursor} key={caseItem.id} {...caseItem} />
           ))}
         </div>
       </div>
