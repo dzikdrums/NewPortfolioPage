@@ -26,14 +26,24 @@ const caseStudies = [
   {
     id: 3,
 
+    subtitle: 'Car Configurator',
+    title: 'Car Configurator based on Teslas',
+    img: 'CarBuilder',
+    code: 'https://github.com/dzikdrums/Car-Builder',
+    demo: 'https://carconfigurator.netlify.app',
+  },
+  {
+    id: 4,
+
     subtitle: 'Bulletin Board',
     title: 'Bulletin board with MongoDB',
     img: 'projects-2',
     code: 'https://github.com/dzikdrums/MernApp',
     demo: 'https://bulletinboard.netlify.com/',
   },
+
   {
-    id: 4,
+    id: 5,
     subtitle: 'Portfolio page',
     title: 'Portfolio page in React',
     img: 'projects-5',
@@ -41,7 +51,7 @@ const caseStudies = [
     demo: 'https://maciejdzik.netlify.com',
   },
   {
-    id: 5,
+    id: 6,
     subtitle: 'Administrator panel',
     title: 'Administrator panel in pure HTML CSS',
     img: 'projects-3',
